@@ -888,6 +888,14 @@ sam9x25ek = {'device_type': 'at91sam9x25ek',
                     'lpae': False,
                     'fastboot': False}
 
+tegra124_jetson_tk1 = {'device_type': 'tegra124-jetson-tk1',
+                       'templates': ['generic-arm-dtb-kernel-ci-boot-template.json'],
+                       'defconfig_blacklist': ['arm-allmodconfig'],
+                       'kernel_blacklist': [],
+                       'nfs_blacklist': [],
+                       'lpae': True,
+                       'fastboot': False}
+
 device_map = {'bcm2835-rpi-b-plus.dtb': [bcm2835_rpi_b_plus],
               'bcm2836-rpi-2-b.dtb' : [ bcm2836_rpi_2_b],
               'bcm4708-smartrg-sr400ac.dtb': [bcm4708_smartrg_sr400ac],
@@ -920,7 +928,7 @@ device_map = {'bcm2835-rpi-b-plus.dtb': [bcm2835_rpi_b_plus],
               'qcom-apq8064-ifc6410.dtb': [ifc6410],
               'highbank.dtb': [highbank],
               'at91-sama5d3_xplained.dtb': [sama53d],
-              'tegra124-jetson-tk1.dtb': [jetson_tk1],
+              'tegra124-jetson-tk1.dtb': [jetson_tk1, tegra124_jetson_tk1],
               'tegra124-nyan-big.dtb': [tegra124_nyan_big],
               'zynq-parallella.dtb': [parallella],
               'zynq-zc702.dtb': [zynq_zc702],
